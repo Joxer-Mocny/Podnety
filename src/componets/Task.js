@@ -1,22 +1,19 @@
+import "../App";
 
-import '../App'
+const Task = ({ task, onToggle }) => {
+  return (
+    <div onClick={() => onToggle(task.id)}>
+      <p>
+        {task.text} {task.text1}
+      </p>
+      <img src={task.img.imagePreviewUrl} style={{ width: "200px" }} />
+      <div>
+        <p className={`task ${task.hidden === true ? "hidden" : ""}`}>
+          {task.text2} {task.date}
+        </p>
+      </div>
+    </div>
+  );
+};
 
-const Task = ({ task,  onToggle,  }) => {
-    
-    
-    
-    return (
-        <div onClick={() => onToggle(task.id)} >
-            <p>{task.text}, {task.text1}, {task.image}</p>
-        <div> 
-        <p className={`task ${task.hide ? '' : 'reminder'}`} >{task.text2} {task.day} . {task.month} . {task.year} </p> </div>  
-              
-        </div>
-    );
-    
-    
-}
-
-
-
-export default Task
+export default Task;

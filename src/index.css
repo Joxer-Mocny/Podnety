@@ -62,9 +62,8 @@ body {
   cursor: pointer;
 }
 
-.task.hide {
+.hidden {
   display: none;
-  
 }
 
 .task h3 {

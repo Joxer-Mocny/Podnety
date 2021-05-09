@@ -1,18 +1,14 @@
-import Task from "./Task"
+import Task from "./Task";
 
-const Tasks = ({tasks, onToggle }) => {
-  
+const Tasks = ({ tasks, onToggle }) => {
 
-    return (
-        <>
-         {tasks.map((task) =>(
-         <Task key={task.id} 
-         task={task} 
-         onToggle={onToggle}
-         />   
-         ))}
-        </>
-    )
-}
+  return (
+    <>
+      {tasks.map((task) => (
+        <Task key={task.id} task={task} onToggle={onToggle} />
+      ))}
+    </>
+  );
+};
 
-export default Tasks
+export default Tasks;

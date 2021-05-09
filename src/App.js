@@ -15,15 +15,16 @@ function App() {
 //Add Task
 const addTask = (task) => {
   const id  = Math.floor(Math.random()* 1000)+1
-  const newTask = {id, ...task}
-  setTasks([...tasks, newTask])
+  const hidden = true
+  const newTask = {id, hidden, ...task}
+  setTasks([newTask, ...tasks])
 
 }
 
 
 
 const toggleReminder = (id) => {
-  setTasks(tasks.map((task) => task.id === id ? {...task, reminder: !task.hide,  }  : task
+  setTasks(tasks.map((task) => task.id === id ? {...task, hidden: !task.hidden,  }  : task
       )
    )
  }
